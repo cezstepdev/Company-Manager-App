@@ -1,26 +1,33 @@
 import React, {useState} from "react";
 import axios from "axios";
+import {Redirect} from "react-router-dom";
 
 const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [rePassword, setRePassword] = useState('');
+    const [redirect, setRedirect] = useState(false);
 
     const submit = async (e) => {
-        e.preventDefault();
-        console.log(email)
-        const data = {
-            username: email,
-            password: password
-        };
+        if(rePassword === password) {
+            e.preventDefault();
+            const data = {
+                username: email,
+                password: password
+            };
 
-        axios
-            .post('http://localhost:8080/api/v1/registration', data)
-            .then(
-                res => {
-                    console.log(res);
-                }
-            );
+            axios
+                .post('http://localhost:8080/api/v1/registration', data)
+                .then(
+                    res => {
+                        setRedirect(true);
+                    }
+                );
+        }
+    };
+
+    if(redirect) {
+        return <Redirect to="/login"/>
     }
 
     return (
