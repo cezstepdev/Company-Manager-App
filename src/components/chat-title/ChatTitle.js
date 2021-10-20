@@ -8,7 +8,7 @@ const ChatTitle = ({ selectedConversation }) => {
     if (selectedConversation) {
         chatTitleContents = (
             <>
-                <span>{ selectedConversation.title }</span>
+                <span>{ selectedConversation.recipient }</span>
             </>
         );
     }

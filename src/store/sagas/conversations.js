@@ -1,8 +1,9 @@
 import { put, takeEvery } from 'redux-saga/effects';
+import axios from "axios";
 
 const delay = (ms) => new Promise(res => setTimeout(res, ms));
 
-const conversations = [
+let conversations = [
     { 
         id: '1',
         imageUrl: require('../../images/profiles/daryl.png').default,
@@ -296,6 +297,17 @@ const conversations = [
 ];
 
 export const conversationsSaga = function*() {
+    axios.get('http://localhost:8080/api/v1/conversation/czarek', {
+        headers: {
+            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZGFtIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6InN0dWRlbnQ6d3JpdGUifSx7ImF1dGhvcml0eSI6InN0dWRlbnQ6cmVhZCJ9LHsiYXV0aG9yaXR5IjoiY291cnNlOnJlYWQifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifSx7ImF1dGhvcml0eSI6ImNvdXJzZTp3cml0ZSJ9XSwiaWF0IjoxNjM0NjQ4MjgzLCJleHAiOjE2MzU4MDc2MDB9.kAJQbH-vmVjIZxj8Y2ucnp5oWaiMaYfNZsebO5WMJf8'
+        }
+    }).then(
+        res => {
+            console.log(res.data);
+            console.log(conversations);
+            conversations = res.data;
+        }
+    );
     yield delay(1000);
     yield put({
         type: 'CONVERSATIONS_LOADED',

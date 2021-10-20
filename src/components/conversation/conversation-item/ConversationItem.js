@@ -17,7 +17,7 @@ const ConversationItem = (
     return (
         <div className={className} onClick={() => onConversationItemSelected(conversation.id)}>
             <img src={conversation.imageUrl} alt={conversation.imageAlt} />
-            <div className="title-text">{conversation.title}</div>
+            <div className="title-text">{conversation.recipient}</div>
             <div className="created-date">{conversation.createdAt}</div>
             <div className="conversation-message">
                 {conversation.latestMessageText}

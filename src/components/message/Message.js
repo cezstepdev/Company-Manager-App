@@ -4,6 +4,9 @@ import classNames from 'classnames';
 import './Message.css';
 
 const Message = ({ isMyMessage, message }) => {
+    if(message.sender === 'czarek')
+        isMyMessage = true;
+
     const messageClass = classNames('message-row', {
         'you-message': isMyMessage,
         'other-message': !isMyMessage
@@ -17,7 +20,7 @@ const Message = ({ isMyMessage, message }) => {
             <div className="message-content">
                 {imageThumbnail}
                 <div className="message-text">
-                    {message.messageText}
+                    {message.message}
                 </div>
                 <div className="message-time">{message.createdAt}</div>
             </div>

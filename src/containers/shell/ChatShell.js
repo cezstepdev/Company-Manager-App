@@ -39,16 +39,18 @@ const ChatShell = (
     }
 
     return (
-        <div id="chat-container">
-            <ConversationSearch/>
+        <div style={{display: "inline-flex"}}>
             <ConversationList
                 onConversationItemSelected={conversationChanged}
                 conversations={conversations}
                 selectedConversation={selectedConversation} />
-            <ChatTitle selectedConversation={selectedConversation}/>
-            {conversationContent}
-            {/*<MessageList messages={selectedConversation.messages}/>*/}
-            <ChatForm onMessageSubmitted={onMessageSubmitted}/>
+            <div id="chat-container">
+                {/*<ConversationSearch/>*/}
+                <ChatTitle selectedConversation={selectedConversation}/>
+                {conversationContent}
+                {/*<MessageList messages={selectedConversation.messages}/>*/}
+                <ChatForm onMessageSubmitted={onMessageSubmitted}/>
+            </div>
         </div>
     );
 }
