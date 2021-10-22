@@ -39,7 +39,7 @@ const ChatShell = (
     }
 
     return (
-        <div style={{display: "inline-flex"}}>
+        <div id="messenger">
             <ConversationList
                 onConversationItemSelected={conversationChanged}
                 conversations={conversations}

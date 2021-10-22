@@ -12,3 +12,8 @@
   background: #FFF;
   border-radius: 10px;
 }
+
+#messenger {
+  display: inline-flex;
+  margin-left: 400px;
+}
