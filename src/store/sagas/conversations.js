@@ -8,21 +8,21 @@ let conversations = [
         id: '1',
         imageUrl: require('../../images/profiles/daryl.png').default,
         imageAlt: 'Daryl Duckmanton',
-        title: 'Daryl Duckmanton',
+        recipient: 'Daryl Duckmanton',
         createdAt: 'Apr 16',
-        latestMessageText: 'This is a message',
+        latestMessage: 'This is a message',
         messages: [
             {
                 imageUrl: null,
                 imageAlt: null,
-                messageText: 'Ok then',
+                message: 'Ok then',
                 createdAt: 'Apr 16',
                 isMyMessage: true
             },
             {
                 imageUrl: require('../../images/profiles/daryl.png').default,
                 imageAlt: 'Daryl Duckmanton',
-                messageText: `
+                message: `
                     Yeah I think it's best we do that. Otherwise things won't work well at all. 
                     I'm adding more text here to test the sizing of the speech bubble and the 
                     wrapping of it too.
@@ -33,14 +33,14 @@ let conversations = [
             {
                 imageUrl: null,
                 imageAlt: null,
-                messageText: 'Maybe we can use Jim\'s studio.',
+                message: 'Maybe we can use Jim\'s studio.',
                 createdAt: 'Apr 15',
                 isMyMessage: true
             },
             {
                 imageUrl: require('../../images/profiles/daryl.png').default,
                 imageAlt: 'Daryl Duckmanton',
-                messageText: `
+                message: `
                     All I know is where I live it's too hard
                     to record because of all the street noise.
                 `,
@@ -50,7 +50,7 @@ let conversations = [
             {
                 imageUrl: null,
                 imageAlt: null,
-                messageText: `
+                message: `
                     Well we need to work out sometime soon where
                     we really want to record our video course.
                 `,
@@ -60,7 +60,7 @@ let conversations = [
             {
                 imageUrl: require('../../images/profiles/daryl.png').default,
                 imageAlt: 'Daryl Duckmanton',
-                messageText: `
+                message: `
                     I'm just in the process of finishing off the
                     last pieces of material for the course.
                 `,
@@ -70,21 +70,21 @@ let conversations = [
             {
                 imageUrl: null,
                 imageAlt: null,
-                messageText: 'How\'s it going?',
+                message: 'How\'s it going?',
                 createdAt: 'Apr 13',
                 isMyMessage: true
             },
             {
                 imageUrl: require('../../images/profiles/daryl.png').default,
                 imageAlt: 'Daryl Duckmanton',
-                messageText: ' Hey mate what\'s up?',
+                message: ' Hey mate what\'s up?',
                 createdAt: 'Apr 13',
                 isMyMessage: false
             },
             {
                 imageUrl: null,
                 imageAlt: null,
-                messageText: 'Hey Daryl?',
+                message: 'Hey Daryl?',
                 createdAt: 'Apr 13',
                 isMyMessage: true
             }
@@ -94,21 +94,21 @@ let conversations = [
         id: '2', 
         imageUrl: require('../../images/profiles/kim.jpeg').default,
         imageAlt: 'Kim O\'Neil',
-        title: 'Kim O\'Neil',
+        recipient: 'Kim O\'Neil',
         createdAt: 'Oct 20',
-        latestMessageText: 'Ok fair enough. Well good talking to you.',
+        latestMessage: 'Ok fair enough. Well good talking to you.',
         messages: [
             {
                 imageUrl: null,
                 imageAlt: null,
-                messageText: 'Ok fair enough. Well good talking to you.',
+                message: 'Ok fair enough. Well good talking to you.',
                 createdAt: 'Oct 20',
                 isMyMessage: true
             },
             {
                 imageUrl: require('../../images/profiles/kim.jpeg').default,
                 imageAlt: 'Kim O\'Neil',
-                messageText: `
+                message: `
                     Not sure exactly yet. It will be next year sometime. Probably late.
                 `,
                 createdAt: 'Oct 20',
@@ -117,14 +117,14 @@ let conversations = [
             {
                 imageUrl: null,
                 imageAlt: null,
-                messageText: 'Yeah I know. But oh well. So when is the big date?',
+                message: 'Yeah I know. But oh well. So when is the big date?',
                 createdAt: 'Oct 19',
                 isMyMessage: true
             },
             {
                 imageUrl: require('../../images/profiles/kim.jpeg').default,
                 imageAlt: 'Kim O\'Neil',
-                messageText: `
+                message: `
                     Well I know you like doing that stuff. But honestly I think
                     you are already really talented. It's a shame you haven't found
                     what you are looking for yet.
@@ -135,7 +135,7 @@ let conversations = [
             {
                 imageUrl: null,
                 imageAlt: null,
-                messageText: `
+                message: `
                     I'm doing ok. Just working on building some applications to
                     bulk up my resume, so I can get a better job.
                 `,
@@ -145,7 +145,7 @@ let conversations = [
             {
                 imageUrl: require('../../images/profiles/kim.jpeg').default,
                 imageAlt: 'Kim O\'Neil',
-                messageText: `
+                message: `
                     I've just been really busy at work myself, looking to get
                     married sometime next year too. How are you going?
                 `,
@@ -155,21 +155,21 @@ let conversations = [
             {
                 imageUrl: null,
                 imageAlt: null,
-                messageText: 'Yes it has been a little while',
+                message: 'Yes it has been a little while',
                 createdAt: 'Oct 19',
                 isMyMessage: true
             },
             {
                 imageUrl: require('../../images/profiles/kim.jpeg').default,
                 imageAlt: 'Kim O\'Neil',
-                messageText: 'Hey!!!! Have not spoken to you for a while',
+                message: 'Hey!!!! Have not spoken to you for a while',
                 createdAt: 'Oct 19',
                 isMyMessage: false
             },
             {
                 imageUrl: null,
                 imageAlt: null,
-                messageText: 'Hi Kim?',
+                message: 'Hi Kim?',
                 createdAt: 'Oct 19',
                 isMyMessage: true
             }
@@ -179,14 +179,14 @@ let conversations = [
         id: '3', 
         imageUrl: require('../../images/profiles/john.jpeg').default,
         imageAlt: 'John Anderson',
-        title: 'John Anderson',
+        recipient: 'John Anderson',
         createdAt: '1 week ago',
-        latestMessageText: 'Yes I love how Python does that',
+        latestMessage: 'Yes I love how Python does that',
         messages: [
             {
                 imageUrl: null,
                 imageAlt: null,
-                messageText: 'Hi',
+                message: 'Hi',
                 createdAt: '1 week ago',
                 isMyMessage: true
             }
@@ -196,14 +196,14 @@ let conversations = [
         id: '4',
         imageUrl: require('../../images/profiles/ben.png').default,
         imageAlt: 'Ben Smith',
-        title: 'Ben Smith',
+        recipient: 'Ben Smith',
         createdAt: '2:49 PM',
-        latestMessageText: 'Yeah Miami Heat are done',
+        latestMessage: 'Yeah Miami Heat are done',
         messages: [
             {
                 imageUrl: null,
                 imageAlt: null,
-                messageText: 'Hi',
+                message: 'Hi',
                 createdAt: '2:49',
                 isMyMessage: true
             }
@@ -213,14 +213,14 @@ let conversations = [
         id: '5',
         imageUrl: require('../../images/profiles/douglas.png').default,
         imageAlt: 'Douglas Johannasen',
-        title: 'Douglas Johannasen',
+        recipient: 'Douglas Johannasen',
         createdAt: '6:14 PM',
-        latestMessageText: 'No it does not',
+        latestMessage: 'No it does not',
         messages: [
             {
                 imageUrl: null,
                 imageAlt: null,
-                messageText: 'Hi',
+                message: 'Hi',
                 createdAt: '6:14 PM',
                 isMyMessage: true
             }
@@ -230,14 +230,14 @@ let conversations = [
         id: '6',
         imageUrl: require('../../images/profiles/jacob.png').default,
         imageAlt: 'Jacob Manly',
-        title: 'Jacob Manly',
+        recipient: 'Jacob Manly',
         createdAt: '3 secs ago',
-        latestMessageText: 'Just be very careful doing that',
+        latestMessage: 'Just be very careful doing that',
         messages: [
             {
                 imageUrl: null,
                 imageAlt: null,
-                messageText: 'Hi',
+                message: 'Hi',
                 createdAt: '3 secs ago',
                 isMyMessage: true
             }
@@ -247,14 +247,14 @@ let conversations = [
         id: '7',
         imageUrl: require('../../images/profiles/stacey.jpeg').default,
         imageAlt: 'Stacey Wilson',
-        title: 'Stacey Wilson',
+        recipient: 'Stacey Wilson',
         createdAt: '30 mins ago',
-        latestMessageText: 'Awesome!!! Congratulations!!!!',
+        latestMessage: 'Awesome!!! Congratulations!!!!',
         messages: [
             {
                 imageUrl: null,
                 imageAlt: null,
-                messageText: 'Hi',
+                message: 'Hi',
                 createdAt: '30 mins ago',
                 isMyMessage: true
             }
@@ -264,14 +264,14 @@ let conversations = [
         id: '8',
         imageUrl: require('../../images/profiles/stan.jpeg').default,
         imageAlt: 'Stan George',
-        title: 'Stan George',
+        recipient: 'Stan George',
         createdAt: '1 week ago',
-        latestMessageText: 'Good job',
+        latestMessage: 'Good job',
         messages: [
             {
                 imageUrl: null,
                 imageAlt: null,
-                messageText: 'Hi',
+                message: 'Hi',
                 createdAt: '1 week ago',
                 isMyMessage: true
             }
@@ -281,14 +281,14 @@ let conversations = [
         id: '9',
         imageUrl: require('../../images/profiles/sarah.jpeg').default,
         imageAlt: 'Sarah Momes',
-        title: 'Sarah Momes',
+        recipient: 'Sarah Momes',
         createdAt: '1 year ago',
-        latestMessageText: 'Thank you. I appreciate that.',
+        latestMessage: 'Thank you. I appreciate that.',
         messages: [
             {
                 imageUrl: null,
                 imageAlt: null,
-                messageText: 'Hi',
+                message: 'Hi',
                 createdAt: '1 year ago',
                 isMyMessage: true
             }
@@ -297,15 +297,16 @@ let conversations = [
 ];
 
 export const conversationsSaga = function*() {
-    axios.get('http://localhost:8080/api/v1/conversation/czarek', {
+    let user = localStorage.getItem('username');
+    axios.get('http://localhost:8080/api/v1/conversation/' + user, {
         headers: {
             'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZGFtIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6InN0dWRlbnQ6d3JpdGUifSx7ImF1dGhvcml0eSI6InN0dWRlbnQ6cmVhZCJ9LHsiYXV0aG9yaXR5IjoiY291cnNlOnJlYWQifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifSx7ImF1dGhvcml0eSI6ImNvdXJzZTp3cml0ZSJ9XSwiaWF0IjoxNjM0NjQ4MjgzLCJleHAiOjE2MzU4MDc2MDB9.kAJQbH-vmVjIZxj8Y2ucnp5oWaiMaYfNZsebO5WMJf8'
         }
     }).then(
         res => {
-            console.log(res.data);
-            console.log(conversations);
-            conversations = res.data;
+            console.log(res);
+            if(res.data.length > 0)
+                conversations = res.data;
         }
     );
     yield delay(1000);

@@ -16,11 +16,11 @@ const ConversationItem = (
 
     return (
         <div className={className} onClick={() => onConversationItemSelected(conversation.id)}>
-            <img src={conversation.imageUrl} alt={conversation.imageAlt} />
+            <img src="https://cenea.org.pl/wp-content/uploads/2019/05/blank-profile-picture-973460_960_720-500x500.png" alt={conversation.imageAlt} />
             <div className="title-text">{conversation.recipient}</div>
             <div className="created-date">{conversation.createdAt}</div>
             <div className="conversation-message">
-                {conversation.latestMessageText}
+                {conversation.latestMessage}
             </div>
         </div>
     );

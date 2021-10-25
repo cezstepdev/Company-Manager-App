@@ -18,7 +18,7 @@ const Home = () => {
 
     return (
         <div>
-            {/*Hi {JSON.parse(localStorage.getItem('user')).username}*/}
+            Home Component
         </div>
     );
 };
