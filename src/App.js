@@ -1,11 +1,12 @@
 import './App.css';
-import Nav from "./components/Nav";
+import Nav from "./components/navigation/Nav";
 import Login from "./pages/Login";
 import {BrowserRouter, Route} from "react-router-dom";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Messenger from "./pages/Messenger";
 import React from "react";
+import Tasks from "./pages/Tasks";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                     <Route path="/messenger" exact component={Messenger}/>
                     <Route path="/login" component={Login}/>
                     <Route path="/register" component={Register}/>
+                    <Route path="/tasks" component={Tasks}/>
                 </main>
             </BrowserRouter>
         </div>

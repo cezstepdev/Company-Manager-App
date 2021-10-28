@@ -31,7 +31,7 @@ const Login = () => {
     }
 
     return (
-        <form onSubmit={submit}>
+        <form onSubmit={submit} className="login-page">
             <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
 
             <div className="form-floating">

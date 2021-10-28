@@ -23,17 +23,17 @@
   border-right: none;
   color: #330;
   border-radius: 6px 0 0 6px;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 button {
-  height: 51px;
+  height: 56px;
   flex: 0 0 90px;
   padding: 0 10px;
   background: #0048AA;
   border: 1px solid #002C88;
   color: #FFF;
-  font-size: 1.4rem;
+  font-size: 1rem;
   border-radius: 0 6px 6px 0;
   outline: none;
   cursor: pointer;

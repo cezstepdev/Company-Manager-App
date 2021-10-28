@@ -45,8 +45,12 @@ const Nav = () => {
                         <li className="nav-item">
                             <Link to="/messenger" className="nav-link active navbar-brand">Messenger</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link to="/tasks" className="nav-link active navbar-brand">Tasks</Link>
+                        </li>
                     </ul>
                 </div>
+
 
                 <div>
                     <ul className="navbar-nav me-auto mb-2 mb-md-0">

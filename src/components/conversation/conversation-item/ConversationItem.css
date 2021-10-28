@@ -3,7 +3,7 @@
     grid-template-columns: 40px 1fr max-content;
     grid-gap: 10px;
     color: #ddd;
-    font-size: 1.3rem;
+    font-size: 1rem;
     border-bottom: 1px solid #002C88;
     padding: 20px 20px 20px 15px;
   }
@@ -36,7 +36,7 @@
   .created-date {
     color: #ddd;
     white-space: nowrap;
-    font-size: 1rem;
+    font-size: .8rem;
   }
   
   .conversation-message {
