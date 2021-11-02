@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 
 import {conversationChanged, conversationsRequested, newMessageAdded} from '../../store/actions';
-import ConversationSearch from '../../components/conversation/conversation-search/ConversationSearch';
 import ConversationList from '../../components/conversation/conversation-list/ConversationList';
 import ChatTitle from '../../components/chat-title/ChatTitle';
 import MessageList from '../../components/message/MessageList';

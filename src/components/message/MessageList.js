@@ -3,12 +3,12 @@ import React from 'react';
 import Message from './Message';
 import './MessageList.css';
 
-const MessageList = ({ messages }) => {
+const MessageList = ({messages}) => {
     const messageItems = messages.map((message, index) => {
-        return <Message 
+        return <Message
             key={index}
             isMyMessage={message.isMyMessage}
-            message={message} />;
+            message={message}/>;
     });
 
     return (

@@ -1,35 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import './Tasks.css';
+import TaskList from "../components/tasks/TaskList/TaskList";
+import {TabView, TabPanel} from 'primereact/tabview';
 
 const Tasks = () => {
+    const [activeIndex, setActiveIndex] = useState(0);
+
     return (
-        <div id="main-task-container">
-            <div className="main">
-                <div className="two">
-                    <div className="px-3">
-                        <div className="round">
-                            <img
-                                src="https://img.icons8.com/bubbles/100/000000/girl-with-glasses-art-palette.png"
-                                width="23"/>
-                        </div>
-                    </div>
-                    <div className="px-3 pt-3">
-                        <h3 className="name">Friendly Painter</h3>
-                        <p className="quote2">
-                            Within the exercise, we design a room in a scandinavian
-                            style.
-                        </p>
-                    </div>
-                    <div className="d-flex justify-content-start px-3 align-items-center">
-                        <span className="quote2 pl-2">Task: Practice</span>
-                    </div>
-                    <div className="d-flex justify-content-between px-3 align-items-center pb-3">
-                        <div className="d-flex justify-content-start align-items-center">
-                            <span className="quote2 pl-2">Date: 01.07.2020</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div>
+            <TabView activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)}>
+                <TabPanel header="TO DO">
+                    <TaskList tasks={[{title: 'sieasdasdasdma', done: false}, {title: 'elasdadasdo', done: false}]}/>
+                </TabPanel>
+                <TabPanel header="Done">
+                    <TaskList tasks={[{title: 'siema', done: true}, {title: 'elo', done: true}]}/>
+                </TabPanel>
+            </TabView>
         </div>
     )
 }

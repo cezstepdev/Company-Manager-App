@@ -59,6 +59,7 @@ body {
 }
 
 .two {
+    margin: 10px;
     width: 270px;
     background-color: #fff;
     justify-content: center;

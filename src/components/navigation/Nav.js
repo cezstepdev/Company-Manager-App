@@ -8,7 +8,6 @@ const Nav = () => {
     const logout = () => {
         localStorage.setItem('username', null)
     };
-    console.log(login);
 
     if(login === 'null') {
         nav = (
