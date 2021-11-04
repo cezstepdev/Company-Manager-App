@@ -1,5 +1,7 @@
 import React from "react";
 import TaskItem from "../TaskItem/TaskItem";
+import Tasks from "../../../pages/Tasks";
+import {DataTableCrudDemo} from "../DataTableCrudDemo";
 
 const TaskList = ({tasks}) => {
     const taskItems = tasks.map((task, index) => {
@@ -10,7 +12,8 @@ const TaskList = ({tasks}) => {
 
     return (
        <div className="main">
-           {taskItems}
+           {/*{taskItems}*/}
+           <DataTableCrudDemo/>
        </div>
     )
 }

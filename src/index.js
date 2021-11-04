@@ -7,8 +7,10 @@ import rootReducer from './store/reducers';
 import {Provider} from "react-redux";
 import {applyMiddleware, createStore} from "redux";
 import createSagaMiddleware from 'redux-saga';
-
 import rootSaga from './store/sagas';
+import 'primereact/resources/themes/saga-blue/theme.css'
+import 'primereact/resources/primereact.min.css'
+import 'primeicons/primeicons.css'
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(

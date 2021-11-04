@@ -22,7 +22,7 @@ function ChatForm({onMessageSubmitted}) {
                 placeholder="type a message"
                 value={message}
                 onChange={handleChange} />
-            <button type="submit">Send</button>
+            <button className="button" type="submit">Send</button>
         </form>
     );
 }

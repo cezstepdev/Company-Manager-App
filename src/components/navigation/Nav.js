@@ -54,6 +54,9 @@ const Nav = () => {
                 <div>
                     <ul className="navbar-nav me-auto mb-2 mb-md-0">
                         <li className="nav-item">
+                            <Link to="/" className="nav-link active">{login}</Link>
+                        </li>
+                        <li className="nav-item">
                             <Link to="/" className="nav-link active" onClick={logout}>Logout</Link>
                         </li>
                     </ul>
