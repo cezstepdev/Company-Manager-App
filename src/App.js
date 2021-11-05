@@ -7,6 +7,7 @@ import Register from "./pages/Register";
 import Messenger from "./pages/Messenger";
 import React from "react";
 import Tasks from "./pages/Tasks";
+import EventsCalendar from "./components/Events/EventsCalendar";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                     <Route path="/login" component={Login}/>
                     <Route path="/register" component={Register}/>
                     <Route path="/tasks" component={Tasks}/>
+                    <Route path="/events" component={EventsCalendar}/>
                 </main>
             </BrowserRouter>
         </div>
