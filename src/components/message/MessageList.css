@@ -39,7 +39,7 @@
   }
   
   .message-time {
-    font-size: 1rem;
+    font-size: .7rem;
     color: #777;
   }
   
@@ -51,15 +51,13 @@
   }
   
   .you-message .message-text {
-    background: #0048AA;
+    background: #1877F2;
     color: #eee;
-    border: 1px solid #0048AA;
     border-radius: 14px 14px 0 14px;
   }
   
   .other-message .message-text {
-    background: #eee;
+    background: rgba(255, 255, 255, .7);
     color: #111;
-    border: 1px solid #ddd;
     border-radius: 14px 14px 14px 0;
   }

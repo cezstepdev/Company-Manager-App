@@ -7,7 +7,7 @@ import Register from "./pages/Register";
 import Messenger from "./pages/Messenger";
 import React from "react";
 import Tasks from "./pages/Tasks";
-import EventsCalendar from "./components/Events/EventsCalendar";
+import {EventsCalendar} from "./components/Events/EventsCalendar";
 
 function App() {
     return (

@@ -61,11 +61,13 @@ export class DataTableCrudDemo extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:8080/api/v1/task/all', {
+        const config = {
             headers: {
-                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZGFtIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6InN0dWRlbnQ6d3JpdGUifSx7ImF1dGhvcml0eSI6InN0dWRlbnQ6cmVhZCJ9LHsiYXV0aG9yaXR5IjoiY291cnNlOnJlYWQifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifSx7ImF1dGhvcml0eSI6ImNvdXJzZTp3cml0ZSJ9XSwiaWF0IjoxNjM1ODg0NTMzLCJleHAiOjE2MzcwMTcyMDB9.LjCWddu_g7wHknD8_oelkoEZv8UGHJ1EojCQmlZgtKE'
+                Authorization: localStorage.getItem('token')
             }
-        }).then(
+        };
+
+        axios.get('http://localhost:8080/api/v1/task/all', config).then(
             res => {
                 this.setState({products: res.data})
             }
@@ -113,11 +115,13 @@ export class DataTableCrudDemo extends Component {
                     taskStatus: product.taskStatus
                 };
 
-                axios.patch('http://localhost:8080/api/v1/task', data, {
+                const config = {
                     headers: {
-                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZGFtIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6InN0dWRlbnQ6d3JpdGUifSx7ImF1dGhvcml0eSI6InN0dWRlbnQ6cmVhZCJ9LHsiYXV0aG9yaXR5IjoiY291cnNlOnJlYWQifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifSx7ImF1dGhvcml0eSI6ImNvdXJzZTp3cml0ZSJ9XSwiaWF0IjoxNjM1ODg0NTMzLCJleHAiOjE2MzcwMTcyMDB9.LjCWddu_g7wHknD8_oelkoEZv8UGHJ1EojCQmlZgtKE'
+                        Authorization: localStorage.getItem('token')
                     }
-                }).then(
+                };
+
+                axios.patch('http://localhost:8080/api/v1/task', data, config).then(
                     res => {
                         product.username = res.data.username;
                         product.title = res.data.title;
@@ -148,11 +152,13 @@ export class DataTableCrudDemo extends Component {
                     complexity: product.complexity
                 };
 
-                axios.post('http://localhost:8080/api/v1/task', data, {
+                const config = {
                     headers: {
-                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZGFtIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6InN0dWRlbnQ6d3JpdGUifSx7ImF1dGhvcml0eSI6InN0dWRlbnQ6cmVhZCJ9LHsiYXV0aG9yaXR5IjoiY291cnNlOnJlYWQifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifSx7ImF1dGhvcml0eSI6ImNvdXJzZTp3cml0ZSJ9XSwiaWF0IjoxNjM1ODg0NTMzLCJleHAiOjE2MzcwMTcyMDB9.LjCWddu_g7wHknD8_oelkoEZv8UGHJ1EojCQmlZgtKE'
+                        Authorization: localStorage.getItem('token')
                     }
-                }).then(
+                };
+
+                axios.post('http://localhost:8080/api/v1/task', data, config).then(
                     res => {
                         product.id = res.data.id;
                         product.dueDate = res.data.dueDate;
@@ -194,11 +200,15 @@ export class DataTableCrudDemo extends Component {
             product: this.emptyProduct
         });
 
-        axios.delete('http://localhost:8080/api/v1/task/' + this.state.product.id, {
+        const config = {
             headers: {
-                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZGFtIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6InN0dWRlbnQ6d3JpdGUifSx7ImF1dGhvcml0eSI6InN0dWRlbnQ6cmVhZCJ9LHsiYXV0aG9yaXR5IjoiY291cnNlOnJlYWQifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifSx7ImF1dGhvcml0eSI6ImNvdXJzZTp3cml0ZSJ9XSwiaWF0IjoxNjM1ODg0NTMzLCJleHAiOjE2MzcwMTcyMDB9.LjCWddu_g7wHknD8_oelkoEZv8UGHJ1EojCQmlZgtKE'
+                Authorization: localStorage.getItem('token')
             }
-        }).then(r => console.log(r)).catch(reason => console.log(reason));
+        };
+
+        axios.delete('http://localhost:8080/api/v1/task/' + this.state.product.id, config)
+            .then(r => console.log(r))
+            .catch(reason => console.log(reason));
         this.toast.show({severity: 'success', summary: 'Successful', detail: 'Product Deleted', life: 3000});
     }
 

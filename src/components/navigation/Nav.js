@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-
+import './Nav.css'
 const Nav = () => {
 
     let login = localStorage.getItem('username');
@@ -13,11 +13,11 @@ const Nav = () => {
         nav = (
             <div className="container-fluid">
                 <div className="collapse navbar-collapse" id="navbarCollapse">
-                    <ul className="navbar-nav me-auto mb-2 mb-md-0">
-                        <li className="nav-item">
-                            <Link to="/" className="nav-link active navbar-brand">Home</Link>
-                        </li>
-                    </ul>
+                    {/*<ul className="navbar-nav me-auto mb-2 mb-md-0">*/}
+                    {/*    <li className="nav-item">*/}
+                    {/*        <Link to="/" className="nav-link active navbar-brand">Home</Link>*/}
+                    {/*    </li>*/}
+                    {/*</ul>*/}
                 </div>
 
                 <div>
@@ -38,9 +38,9 @@ const Nav = () => {
             <div className="container-fluid">
                 <div className="collapse navbar-collapse" id="navbarCollapse">
                     <ul className="navbar-nav me-auto mb-2 mb-md-0">
-                        <li className="nav-item">
-                            <Link to="/" className="nav-link active navbar-brand">Home</Link>
-                        </li>
+                        {/*<li className="nav-item">*/}
+                        {/*    <Link to="/" className="nav-link active navbar-brand">Home</Link>*/}
+                        {/*</li>*/}
                         <li className="nav-item">
                             <Link to="/messenger" className="nav-link active navbar-brand">Messenger</Link>
                         </li>
@@ -57,7 +57,10 @@ const Nav = () => {
                 <div>
                     <ul className="navbar-nav me-auto mb-2 mb-md-0">
                         <li className="nav-item">
-                            <Link to="/" className="nav-link active">{login}</Link>
+                            <Link to="/" className="nav-link active navbar-brand profile">
+                                <img src="https://cenea.org.pl/wp-content/uploads/2019/05/blank-profile-picture-973460_960_720-500x500.png"/>
+                                {login}
+                            </Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/" className="nav-link active" onClick={logout}>Logout</Link>

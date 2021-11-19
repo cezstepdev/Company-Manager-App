@@ -2,8 +2,7 @@
   display: flex;
   align-items: center;
   grid-area: chat-form;
-  background: #eee;
-  border-radius: 0 0 10px 0;
+  background: rgb(53, 57, 61);
   border-top: 1px solid rgba(0,0,0,0.25);
   padding-left: 22px;
   padding-right: 22px;
@@ -19,19 +18,20 @@
   flex: 1 0 0;
   outline: none;
   padding: 15px;
-  border: 2px solid #ddd;
+  border: 1px solid rgb(43, 47, 51);
   border-right: none;
   color: #330;
   border-radius: 6px 0 0 6px;
   font-size: 1rem;
+  background: rgb(63, 67, 71);
 }
 
 .button {
   height: 56px;
   flex: 0 0 90px;
   padding: 0 10px;
-  background: #0048AA;
-  border: 1px solid #002C88;
+  background: #1877F2;
+  border: 0px solid #002C88;
   color: #FFF;
   font-size: 1rem;
   border-radius: 0 6px 6px 0;

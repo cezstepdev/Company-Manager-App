@@ -10,10 +10,10 @@ const Tasks = () => {
         <div>
             <TabView activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)}>
                 <TabPanel header="TO DO">
-                    <TaskList tasks={[{title: 'sieasdasdasdma', done: false}, {title: 'elasdadasdo', done: false}]}/>
+                    <TaskList tasks={[{title: 'task', done: false}]}/>
                 </TabPanel>
                 <TabPanel header="Done">
-                    <TaskList tasks={[{title: 'siema', done: true}, {title: 'elo', done: true}]}/>
+                    <TaskList tasks={[{title: 'task', done: true}]}/>
                 </TabPanel>
             </TabView>
         </div>

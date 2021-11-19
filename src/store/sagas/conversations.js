@@ -300,7 +300,7 @@ export const conversationsSaga = function*() {
     let user = localStorage.getItem('username');
     axios.get('http://localhost:8080/api/v1/conversation/' + user, {
         headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZGFtIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6InN0dWRlbnQ6d3JpdGUifSx7ImF1dGhvcml0eSI6InN0dWRlbnQ6cmVhZCJ9LHsiYXV0aG9yaXR5IjoiY291cnNlOnJlYWQifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifSx7ImF1dGhvcml0eSI6ImNvdXJzZTp3cml0ZSJ9XSwiaWF0IjoxNjM0NjQ4MjgzLCJleHAiOjE2MzU4MDc2MDB9.kAJQbH-vmVjIZxj8Y2ucnp5oWaiMaYfNZsebO5WMJf8'
+            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZGFtIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6InN0dWRlbnQ6d3JpdGUifSx7ImF1dGhvcml0eSI6InN0dWRlbnQ6cmVhZCJ9LHsiYXV0aG9yaXR5IjoiY291cnNlOnJlYWQifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifSx7ImF1dGhvcml0eSI6ImNvdXJzZTp3cml0ZSJ9XSwiaWF0IjoxNjM3MDAwNzg3LCJleHAiOjE2MzgxNDA0MDB9.qL_0JQQCfCyc-RPlL1d-J8bIvyYAYOR7pb8DcEjGNwg'
         }
     }).then(
         res => {

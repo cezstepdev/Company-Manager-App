@@ -8,6 +8,7 @@ const ChatTitle = ({ selectedConversation }) => {
     if (selectedConversation) {
         chatTitleContents = (
             <>
+                <img src="https://cenea.org.pl/wp-content/uploads/2019/05/blank-profile-picture-973460_960_720-500x500.png"/>
                 <span>{ selectedConversation.recipient }</span>
             </>
         );
